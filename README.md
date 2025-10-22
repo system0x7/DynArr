@@ -3,8 +3,13 @@ A basic implementation of dynamic integer arrays / lists in C with automatic res
 
 ## Building the Library
 ```bash
-# Compile the example against libdynarr.so (after building it once)
-gcc test.c -I./src -L. -ldynarr -o program
+# Linux
+gcc -c -fPIC src/dynarr.c -o dynarr.o
+gcc -shared dynarr.o -o libdynarr.so
+
+# MacOS
+gcc -c -fPIC src/dynarr.c -o dynarr.o
+gcc -dynamiclib dynarr.o -o libdynarr.dylib
 ```
 
 ## Usage
