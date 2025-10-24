@@ -8,7 +8,7 @@ DynArr* create_dynarr() {
 
   arr = malloc(sizeof(DynArr));
   if (!arr) {
-    printf("Memory aldata failed\n");
+    printf("Memory allocation failed\n");
     return NULL;
   }
 
@@ -27,7 +27,7 @@ DynArr* create_dynarr() {
 
 DynArr* resize_dyn_arr(DynArr *arr) {
   if (!arr) {
-    printf("DynArr not found\n");
+    printf("Dynamic array not found\n");
     return NULL;
   }
 
@@ -47,7 +47,7 @@ DynArr* resize_dyn_arr(DynArr *arr) {
 
 void push_element(DynArr *arr, int element) {
   if (!arr) {
-    printf("DynArr not found\n");
+    printf("Dynamic array not found\n");
     return;
   }
   
@@ -64,7 +64,7 @@ void push_element(DynArr *arr, int element) {
 
 void delete_element(DynArr *arr, size_t idx) {
   if (!arr) {
-    printf("DynArr not found\n");
+    printf("Dynamic array not found\n");
     return;
   }
 
